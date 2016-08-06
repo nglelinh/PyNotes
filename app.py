@@ -14,14 +14,14 @@ config = ConfigProvider()
 def get_page(name):
     # Если страница существует
     if function.check_found_file(config.pages_folder + '/' + name + '.md'):
-        page = function.markdown_to_html(name)
+        page = function.markdown_to_html(name, config.pages_folder)
     else:
         page = config.not_found_text
     return page
 
 
 @app.route('/')
-def hello_world():
+def hello():
     return render_template(
         'page.html',
         title=config.main_title,
@@ -31,7 +31,7 @@ def hello_world():
 
 
 @app.route('/<name>')
-def test(name):
+def page(name):
     return render_template(
         'page.html',
         title=config.main_title,
