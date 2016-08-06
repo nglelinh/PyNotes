@@ -1,12 +1,15 @@
 # coding=utf-8
 import markdown
+from config_provider import ConfigProvider
+
+config = ConfigProvider
 
 
 def markdown_to_html(filename):
     """
     Преобразование markdown файла в html код
     """
-    f = open('pages/' + filename + '.md', 'r')
+    f = open(config.pages_folder + '/' + filename + '.md', 'r')
     all_file = ''
     for st in f.readlines():
         all_file += st
