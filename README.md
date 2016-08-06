@@ -12,7 +12,7 @@
 
     python app.py
 
-И перейти по адресу localhost:<port>
+И перейти по адресу localhost:порт_из_конфига
 
 
 
