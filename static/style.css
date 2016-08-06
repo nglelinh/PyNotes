@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 5px;
+}
+.side {
+    padding-right: 10px;
+}
+.logo {
+    margin-top: -5px;
+}
+a {
+    color: #0086B3;
+}
+a:hover {
+    color: #008080;
+}

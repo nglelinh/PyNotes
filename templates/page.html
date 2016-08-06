@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='codehilite.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <table>
+        <tr>
+            <td valign="top" class="side">
+                <h1 class="logo">
+                    <a href="/">{{ title }}</a>
+                </h1>
+                {{ side|safe }}
+            </td>
+            <td valign="top">
+                {{ content|safe }}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
