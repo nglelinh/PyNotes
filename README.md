@@ -6,7 +6,7 @@
     pip install flask
     pip install markdown
 
-И отредавтировать config.ini
+И отредактировать config.ini
 
 После этого необходимо запустить app.py
 
