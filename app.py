@@ -1,8 +1,6 @@
-# coding=utf-8
-
 from flask import Flask, render_template
 from config_provider import ConfigProvider
-
+import os
 import function
 
 app = Flask(__name__)
@@ -12,9 +10,11 @@ config = ConfigProvider()
 
 # Получение содержимого страницы
 def get_page(name):
+    file = os.path.join(config.pages_folder, name + '.md')
+
     # Если страница существует
-    if function.check_found_file(config.pages_folder + '/' + name + '.md'):
-        page = function.markdown_to_html(name, config.pages_folder)
+    if function.check_found_file(file):
+        page = function.markdown_to_html(file)
     else:
         page = config.not_found_text
     return page
