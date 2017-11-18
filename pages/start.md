@@ -1,2 +1,3 @@
-# Добро пожаловать! #
-Это текст стратовой страницы
+# Hello! #
+
+Welcome to markdown auto generate service
